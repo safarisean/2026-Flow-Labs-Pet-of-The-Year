@@ -253,6 +253,43 @@
   color: #18313f;
 }
 
+.matchup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.matchup-card {
+  background: white;
+  border: 1px solid #e3e9e6;
+  border-radius: 16px;
+  padding: 26px 18px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  font-size: 18px;
+}
+
+.matchup-card strong {
+  display: block;
+  font-size: 21px;
+  color: #18313f;
+}
+
+.matchup-card span {
+  display: block;
+  margin: 8px 0;
+  color: #38a96f;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .matchup-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
     
   </style>
 </head>
@@ -385,6 +422,39 @@
       </div>
 
     </section>
+
+  <section class="tough-matchups">
+
+  <h2>Round 1 Matchups We’d Rather Not Have to Pick</h2>
+
+  <p class="section-intro">
+    Three early-round collisions. Somebody’s bracket is getting hurt.
+  </p>
+
+  <div class="matchup-grid">
+
+    <div class="matchup-card">
+      <strong>Athena</strong>
+      <span>vs.</span>
+      <strong>Kerfluffle</strong>
+    </div>
+
+    <div class="matchup-card">
+      <strong>Albie</strong>
+      <span>vs.</span>
+      <strong>Ovi</strong>
+    </div>
+
+    <div class="matchup-card">
+      <strong>Elsie</strong>
+      <span>vs.</span>
+      <strong>Blu</strong>
+    </div>
+
+  </div>
+
+</section>
+
 
   </main>
 
