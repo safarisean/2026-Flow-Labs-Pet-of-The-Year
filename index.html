@@ -122,9 +122,25 @@
   position: relative;
 }
 
+    .pet-card::before {
+  content: "PET OF THE YEAR";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(24, 49, 63, 0.88);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  z-index: 2;
+}
+
 
     .pet-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px) rotate (-0.3deg);
+      box-shadow: 0 9px 24px rgba(0, 0, 0, 0.12);
     }
 
     .pet-card img {
@@ -138,7 +154,8 @@
     .pet-card h3 {
       text-align: center;
       margin: 16px 10px 6px;
-      font-size: 20px;
+      font-size: 21px;
+      color: #18313f
     }
 
     .pet-card p {
