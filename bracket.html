@@ -7,84 +7,38 @@
   <title>2026 Flow Labs Pet of the Year Bracket</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+.bracket-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f6f8f7;
-      color: #18313f;
-    }
+.bracket-scroll img {
+  display: block;
+  width: 100%;
+  min-width: 1000px;
+  height: auto;
+}
 
-    header {
-      background: #18313f;
-      color: white;
-      text-align: center;
-      padding: 38px 20px 32px;
-      border-bottom: 5px solid #38b58a;
-    }
+.bracket-actions {
+  margin-top: 22px;
+  text-align: center;
+}
 
-    header img {
-      width: 190px;
-      max-width: 55%;
-      margin-bottom: 18px;
-    }
+@media (max-width: 700px) {
+  .bracket-card {
+    padding: 12px;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: clamp(34px, 6vw, 58px);
-    }
+  .bracket-scroll img {
+    min-width: 1000px;
+  }
 
-    header p {
-      margin: 12px 0 0;
-      color: #dfe8e4;
-      font-size: 17px;
-    }
+  .bracket-note {
+    font-size: 14px;
+  }
+}
 
-    main {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 35px 20px 55px;
-      text-align: center;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-bottom: 24px;
-      color: #18313f;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .bracket-card {
-      background: white;
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    }
-
-    .bracket-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-    }
-
-    .bracket-note {
-      margin-top: 20px;
-      color: #68787e;
-      font-size: 15px;
-    }
-
-    footer {
-      background: #18313f;
-      color: white;
-      text-align: center;
-      padding: 24px 20px;
-      font-size: 14px;
-    }
   </style>
 </head>
 
