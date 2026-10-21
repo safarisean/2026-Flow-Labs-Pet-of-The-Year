@@ -182,7 +182,77 @@
 </head>
 
 <body>
+<script>
+  const pets = [
+    { name: "Glacier", photo: "(Glacier) Jenna Rackovan.jpg" },
+    { name: "Albie", photo: "Albie (Megan Laurie).jpeg" },
+    { name: "Athena", photo: "Athena (Hunter Edmonds).JPG" },
+    { name: "Avi", photo: "Avi.jpg.jpg" },
+    { name: "Bacca", photo: "Bacca (Tod H).PNG" },
+    { name: "Bailey", photo: "Bailey (Ricky Todd).PNG" },
+    { name: "Baxter", photo: "Baxter (Tod H).PNG" },
+    { name: "Beans", photo: "Beans (Sam Blackwell).jpg" },
+    { name: "Beau", photo: "Beau (Tyler Adams).JPG" },
+    { name: "Benny", photo: "Benny (Hunter Edmonds).jpeg" },
+    { name: "Birdy", photo: "Birdy (Dorian Smith).JPG" },
+    { name: "Bitty", photo: "Bitty (Tyler Adams).JPG" },
+    { name: "Blu", photo: "Blu (Dorian Smith).JPG" },
+    { name: "Brody", photo: "Brody (Ariana).jpg" },
+    { name: "Cayden", photo: "Cayden (Ken Davey).JPG" },
+    { name: "Cedric", photo: "Cedric (James Conley).jpg" },
+    { name: "Duncan", photo: "Duncan.jpg" },
+    { name: "Elsie", photo: "Elsie (Sean Turner).jpg" },
+    { name: "Francis", photo: "Francis (Sam Blackwell).jpg" },
+    { name: "George", photo: "George - Jeff Liddle.jpg" },
+    { name: "Hazel", photo: "Hazel (Zack Watson).jpg" },
+    { name: "Hope", photo: "Hope (Tod H).PNG" },
+    { name: "Houdini", photo: "Houdini (Jacob).jpg" },
+    { name: "Iceland", photo: "Iceland (Jenna Rackovan).jpg" },
+    { name: "Indiana Jones", photo: "Indiana Jones (Ben C).jpg" },
+    { name: "Kelso", photo: "Kelso (Ken Davey).jpg" },
+    { name: "Kerfluffle", photo: "Kerfluffle (Ben Mater).jpeg" },
+    { name: "Khaleese", photo: "Khalesse (Tod H).PNG" },
+    { name: "Lando", photo: "Lando (Amie Fancendola).jpg" },
+    { name: "Lily 1", photo: "Lily (Aaron R.).jpeg" },
+    { name: "Lily 2", photo: "Lily (Nick Lucia).JPEG" },
+    { name: "Madra", photo: "Madra (Tod O).png" },
+    { name: "Maple", photo: "Maple (Sue Malhassian).jpg" },
+    { name: "Millie", photo: "Millie (Jacob).JPEG" },
+    { name: "Milo", photo: "Milo (Tod O).jpeg" },
+    { name: "Suki", photo: "Nimbus (Jackie Anderson).png" },
+    { name: "Nimbus", photo: "Nimbus.png" },
+    { name: "Ninny", photo: "Ninny (Andrew).JPG" },
+    { name: "Oakley", photo: "Oakley.jpg" },
+    { name: "Oliver", photo: "Oliver - Steve Savoie.jpg" },
+    { name: "Ollie", photo: "Ollie (Mike).jpg" },
+    { name: "Opal", photo: "Opal (James Conley).jpg" },
+    { name: "Ovi", photo: "Ovi (Daniel Giza).jpg" },
+    { name: "Percy", photo: "Percy 1 (Becca Hall).jpg" },
+    { name: "Poopsie", photo: "Poopsie (Will Sexton).jpg" },
+    { name: "Raj", photo: "Raj (Stu Cain).JPG" },
+    { name: "Reese", photo: "Reese (Andrew).JPG" },
+    { name: "Remi", photo: "Remi.png" },
+    { name: "Sparky", photo: "Sparky (Tod O).JPEG" },
+    { name: "Tootie", photo: "Tootie (Tod H).PNG" },
+    { name: "Zeus", photo: "Zeus (Hunter Edmonds).JPG" },
+    { name: "Zoey", photo: "Zoey (Ricky Todd).JPEG" }
+  ];
 
+  const grid = document.getElementById("pets-grid");
+
+  pets.forEach(pet => {
+    const card = document.createElement("div");
+    card.className = "pet-card";
+
+    card.innerHTML = `
+      <img src="${encodeURI(pet.photo)}" alt="${pet.name}">
+      <h3>${pet.name}</h3>
+      <p>Certified contender</p>
+    `;
+
+    grid.appendChild(card);
+  });
+</script>
   <header>
     <img
   src="flow-labs-rgb-color-light.png"
