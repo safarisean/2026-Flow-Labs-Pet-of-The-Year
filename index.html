@@ -340,7 +340,64 @@
       name.textContent = pet.name;
 
       const caption = document.createElement("p");
-      caption.textContent = "Certified contender";
+     const petPhrases = {
+  "Glacier": "Cool under pressure",
+  "Albie": "Small name. Big expectations.",
+  "Athena": "Strategic. Powerful. Probably judging you.",
+  "Avi": "Built for the highlight reel",
+  "Bacca": "Hair everywhere. Fear nowhere.",
+  "Bailey": "Veteran locker room presence",
+  "Baxter": "Treat-motivated professional",
+  "Beans": "A surprisingly serious contender",
+  "Beau": "Looks good in the pregame tunnel",
+  "Benny": "No known weaknesses",
+  "Birdy": "Flying under the radar",
+  "Bitty": "Compact but dangerous",
+  "Blu": "Ice in the veins",
+  "Brody": "Has been preparing all morning",
+  "Cayden": "The analytics love this one",
+  "Cedric": "Already enjoying the bye",
+  "Duncan": "Fundamentally sound",
+  "Elsie": "Elite ears. Elite confidence.",
+  "Francis": "A student of the game",
+  "George": "Old-school fundamentals",
+  "Hazel": "Quietly building a dynasty",
+  "Hope": "Believe the hype",
+  "Houdini": "May disappear under pressure",
+  "Iceland": "Cold-blooded competitor",
+  "Indiana Jones": "Belongs in a museum",
+  "Kelso": "Questionable strategy. Excellent vibes.",
+  "Kerfluffle": "Chaos is part of the game plan",
+  "Khaleese": "First of her name. Chaser of squirrels.",
+  "Lando": "Smooth operator",
+  "Lily 1": "One of two. Accept no substitutes.",
+  "Lily 2": "The other Lily has been warned",
+  "Madra": "No scouting report available",
+  "Maple": "Sweet demeanor. Ruthless bracket.",
+  "Millie": "Dangerously photogenic",
+  "Milo": "Peak tournament form",
+  "Suki": "Secretly been training for years",
+  "Nimbus": "Forecast calls for domination",
+  "Ninny": "Name says one thing. Game says another.",
+  "Oakley": "Built for October",
+  "Oliver": "A gentleman and a competitor",
+  "Ollie": "Different spelling. Same ambition.",
+  "Opal": "Precious but relentless",
+  "Ovi": "Championship pedigree",
+  "Percy": "Absolutely believes this is about him",
+  "Poopsie": "The name is doing heavy lifting",
+  "Raj": "Calm. Focused. Snack-oriented.",
+  "Reese": "Strong sleeper pick",
+  "Remi": "Ready to ruin somebody's bracket",
+  "Sparky": "Bringing unnecessary electricity",
+  "Tootie": "Impossible to game-plan for",
+  "Zeus": "Subtlety was never the plan",
+  "Zoey": "Zero idea this tournament exists"
+};
+
+caption.textContent =
+  petPhrases[pet.name] || "Certified contender";
+
 
       card.appendChild(image);
       card.appendChild(name);
