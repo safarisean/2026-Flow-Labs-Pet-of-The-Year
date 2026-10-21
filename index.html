@@ -238,6 +238,8 @@
     { name: "Zoey", photo: "Zoey (Ricky Todd).JPEG" }
   ];
 
+ document.addEventListener("DOMContentLoaded", () => {
+
   const grid = document.getElementById("pets-grid");
 
   pets.forEach(pet => {
@@ -252,6 +254,9 @@
 
     grid.appendChild(card);
   });
+
+});
+
 </script>
   <header>
     <img
