@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets We Have Lost</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111820;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 32px 20px 10px;
+    }
+
+    header img {
+      width: 180px;
+      max-width: 60%;
+    }
+
+    h1 {
+      margin: 20px 0 6px;
+      font-size: clamp(38px, 7vw, 64px);
+    }
+
+    .subtitle {
+      color: #c8d1d4;
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .memorial-stage {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .pet-photo {
+      width: 100%;
+      max-width: 540px;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    .pet-name {
+      font-size: 38px;
+      margin: 24px 0 8px;
+    }
+
+    .memorial-line {
+      color: #b7c2c5;
+      font-size: 18px;
+      min-height: 28px;
+    }
+
+    .begin-button {
+      padding: 15px 28px;
+      background: #38a96f;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 20px 0 26px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 24px 0 40px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #7f9298;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="flow-labs-rgb-color-light.png" alt="Flow Labs">
+    <h1>Pets We Have Lost</h1>
+    <div class="subtitle">Gone from the bracket. Still in our hearts.</div>
+  </header>
+
+  <button class="begin-button" id="begin-button">
+    🥀 Begin Memorial
+  </button>
+
+  <div class="memorial-stage hidden" id="memorial-stage">
+
+    <img id="pet-photo" class="pet-photo" src="" alt="Memorial pet">
+
+    <div id="pet-name" class="pet-name"></div>
+
+    <div id="memorial-line" class="memorial-line"></div>
+
+  </div>
+
+  <a class="back-link" href="index.html">Return to the Tournament</a>
+
+  <script>
+
+    const pets = [
+      { name: "Baxter", image: "Baxter (Tod H).PNG" },
+      { name: "Elsie", image: "Elsie (Sean Turner).jpg" },
+      { name: "Millie", image: "Millie (Jacob).JPEG" },
+      { name: "Duncan", image: "Duncan.jpg" },
+      { name: "Bitty", image: "Bitty (Tyler Adams).JPG" },
+      { name: "Khaleese", image: "Khalesse (Tod H).PNG" },
+      { name: "Madra", image: "Madra (Tod O).png" },
+      { name: "Maple", image: "Maple (Sue Malhassian).jpg" },
+      { name: "Bacca", image: "Bacca (Tod H).PNG" },
+      { name: "Beau", image: "Beau (Tyler Adams).JPG" },
+      { name: "Zoey", image: "Zoey (Ricky Todd).JPEG" },
+      { name: "Kerfluffle", image: "Kerfluffle (Ben Mater).jpeg" },
+      { name: "Suki", image: "Nimbus (Jackie Anderson).png" },
+      { name: "Ovi", image: "Ovi (Daniel Giza).jpg" },
+      { name: "Poopsie", image: "Poopsie (Will Sexton).jpg" },
+      { name: "Cayden", image: "Cayden (Ken Davey).JPG" },
+      { name: "Opal", image: "Opal (James Conley).jpg" },
+      { name: "Kelso", image: "Kelso (Ken Davey).jpg" },
+      { name: "Ninny", image: "Ninny (Andrew).JPG" },
+      { name: "Milo", image: "Milo (Tod O).jpeg" }
+    ];
+
+    const lines = [
+      "Gone too soon.",
+      "Still a very good pet.",
+      "The voters have spoken.",
+      "Forever undefeated in our hearts.",
+      "A difficult day for the franchise.",
+      "Their bracket run ends here.",
+      "We will always have Round 1.",
+      "An icon. A legend. Eliminated.",
+      "The tournament moves on. We do not.",
+      "They deserved more."
+    ];
+
+    let currentPet = 0;
+
+    const photo = document.getElementById("pet-photo");
+    const name = document.getElementById("pet-name");
+    const line = document.getElementById("memorial-line");
+    const stage = document.getElementById("memorial-stage");
+    const button = document.getElementById("begin-button");
+
+    function showPet() {
+
+      photo.style.opacity = 0;
+
+      setTimeout(() => {
+
+        const pet = pets[currentPet];
+
+        photo.src = pet.image;
+        name.textContent = pet.name;
+        line.textContent = lines[currentPet % lines.length];
+
+        photo.style.opacity = 1;
+
+        currentPet = (currentPet + 1) % pets.length;
+
+      }, 900);
+    }
+
+    button.addEventListener("click", () => {
+
+      button.classList.add("hidden");
+      stage.classList.remove("hidden");
+
+      showPet();
+
+      setInterval(showPet, 6500);
+
+    });
+
+  </script>
+
+</body>
+</html>
