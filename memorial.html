@@ -207,6 +207,19 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
 
   button.classList.add("hidden");
   stage.classList.remove("hidden");
+  
+  const musicPlayer = document.getElementById("music-player");
+musicPlayer.style.display = "block";
+
+if (spotifyController) {
+  spotifyController.loadEntity(
+    "spotify:track:61nwhFMBnfAdUAuEgTyh6v",
+    false,
+    11
+  );
+
+  spotifyController.play();
+}
 
   const musicPlayer = document.getElementById("music-player");
 const music = document.getElementById("memorial-music");
