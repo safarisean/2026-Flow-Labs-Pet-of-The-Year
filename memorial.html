@@ -185,7 +185,24 @@
 
       }, 900);
     }
+let spotifyController;
 
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+
+  const element = document.getElementById("embed-iframe");
+
+  const options = {
+    width: "100%",
+    height: "152",
+    uri: "spotify:track:61nwhFMBnfAdUAuEgTyh6v"
+  };
+
+  const callback = (EmbedController) => {
+    spotifyController = EmbedController;
+  };
+
+  IFrameAPI.createController(element, options, callback);
+};
     button.addEventListener("click", () => {
 
   button.classList.add("hidden");
