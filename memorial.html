@@ -194,14 +194,21 @@
 
     button.addEventListener("click", () => {
 
-      button.classList.add("hidden");
-      stage.classList.remove("hidden");
+  button.classList.add("hidden");
+  stage.classList.remove("hidden");
 
-      showPet();
+  const music = document.getElementById("memorial-music");
 
-      setInterval(showPet, 6500);
+  music.contentWindow.postMessage(
+    '{"event":"command","func":"playVideo","args":""}',
+    '*'
+  );
 
-    });
+  showPet();
+
+  setInterval(showPet, 6500);
+
+});
 
   </script>
 
