@@ -114,7 +114,85 @@
   </div>
 
 
+<a class="back-link" href="index.html">Return to the Tournament</a>
 
+<div id="music-player" style="max-width:420px; margin:20px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/4rSKsjxykn9GpEYnNvyR2u?autoplay=1"
+    width="100%"
+    height="152"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="eager">
+  </iframe>
+</div>
+
+<script>
+const pets = [
+  { name: "Baxter", image: "Baxter (Tod H).PNG" },
+  { name: "Elsie", image: "Elsie (Sean Turner).jpg" },
+  { name: "Millie", image: "Millie (Jacob).JPEG" },
+  { name: "Duncan", image: "Duncan.jpg" },
+  { name: "Bitty", image: "Bitty (Tyler Adams).JPG" },
+  { name: "Khaleese", image: "Khalesse (Tod H).PNG" },
+  { name: "Madra", image: "Madra (Tod O).png" },
+  { name: "Maple", image: "Maple (Sue Malhassian).jpg" },
+  { name: "Bacca", image: "Bacca (Tod H).PNG" },
+  { name: "Beau", image: "Beau (Tyler Adams).JPG" },
+  { name: "Zoey", image: "Zoey (Ricky Todd).JPEG" },
+  { name: "Kerfluffle", image: "Kerfluffle (Ben Mater).jpeg" },
+  { name: "Suki", image: "Nimbus (Jackie Anderson).png" },
+  { name: "Ovi", image: "Ovi (Daniel Giza).jpg" },
+  { name: "Poopsie", image: "Poopsie (Will Sexton).jpg" },
+  { name: "Cayden", image: "Cayden (Ken Davey).JPG" },
+  { name: "Opal", image: "Opal (James Conley).jpg" },
+  { name: "Kelso", image: "Kelso (Ken Davey).jpg" },
+  { name: "Ninny", image: "Ninny (Andrew).JPG" },
+  { name: "Milo", image: "Milo (Tod O).jpeg" }
+];
+
+const lines = [
+  "Gone too soon.",
+  "Still a very good pet.",
+  "The voters have spoken.",
+  "Forever undefeated in our hearts.",
+  "A difficult day for the franchise.",
+  "Their bracket run ends here.",
+  "We will always have Round 1.",
+  "An icon. A legend. Eliminated.",
+  "The tournament moves on. We do not.",
+  "They deserved more."
+];
+
+let currentPet = 0;
+
+const photo = document.getElementById("pet-photo");
+const name = document.getElementById("pet-name");
+const line = document.getElementById("memorial-line");
+
+function showPet() {
+  photo.style.opacity = 0;
+
+  setTimeout(() => {
+    const pet = pets[currentPet];
+
+    photo.src = pet.image;
+    name.textContent = pet.name;
+    line.textContent = lines[currentPet % lines.length];
+
+    photo.style.opacity = 1;
+
+    currentPet = (currentPet + 1) % pets.length;
+  }, 900);
+}
+
+showPet();
+setInterval(showPet, 6500);
+</script>
+
+</body>
+</html>
   </script>
 </script>
 </body>
