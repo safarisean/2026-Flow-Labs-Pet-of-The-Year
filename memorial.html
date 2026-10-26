@@ -101,11 +101,9 @@
     <div class="subtitle">Gone from the bracket. Still in our hearts.</div>
   </header>
 
-  <button class="begin-button" id="begin-button">
-    🥀 Begin Memorial
-  </button>
 
-  <div class="memorial-stage hidden" id="memorial-stage">
+
+  <div class="memorial-stage" id="memorial-stage">
 
     <img id="pet-photo" class="pet-photo" src="" alt="Memorial pet">
 
@@ -186,17 +184,8 @@
       }, 900);
     }
 
-    button.addEventListener("click", () => {
-
-  button.classList.add("hidden");
-  stage.classList.remove("hidden");
-
-  
-  showPet();
-
-  setInterval(showPet, 6500);
-
-});
+ showPet () ;
+    setInterval(showPet, 6500);
 
   </script>
 
