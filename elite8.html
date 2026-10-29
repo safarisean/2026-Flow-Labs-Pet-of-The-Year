@@ -1,1 +1,475 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meet the Elite 8</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f5;
+      color: #18313f;
+    }
+
+    header {
+      background: #18313f;
+      color: white;
+      text-align: center;
+      padding: 44px 20px 38px;
+    }
+
+    .logo {
+      width: 190px;
+      max-width: 65%;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      color: #9ed9b9;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1;
+    }
+
+    .header-copy {
+      max-width: 700px;
+      margin: 18px auto 0;
+      color: #d7e1dd;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 46px 20px 70px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      font-size: 19px;
+      line-height: 1.6;
+      color: #5f7077;
+    }
+
+    .pet-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .pet-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #dfe7e3;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    }
+
+    .pet-photo {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pet-content {
+      padding: 24px;
+    }
+
+    .pet-name {
+      margin: 0 0 4px;
+      font-size: 30px;
+      color: #18313f;
+    }
+
+    .owner {
+      color: #38a96f;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .profile-item {
+      margin-bottom: 18px;
+    }
+
+    .profile-item strong {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #7a898f;
+      margin-bottom: 5px;
+    }
+
+    .profile-item p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    .campaign-box {
+      background: #eef7f1;
+      border-left: 4px solid #38a96f;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .campaign-box strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .campaign-box p {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 44px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #38a96f;
+      color: white;
+    }
+
+    .secondary {
+      background: #18313f;
+      color: white;
+    }
+
+    footer {
+      background: #18313f;
+      color: white;
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .pet-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pet-photo {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img
+    class="logo"
+    src="flow-labs-rgb-color-light.png"
+    alt="Flow Labs"
+  >
+
+  <div class="eyebrow">Flow Labs Pet of the Year</div>
+
+  <h1>Meet the Elite 8</h1>
+
+  <p class="header-copy">
+    Fifty-two pets entered. Eight remain.
+    Before casting your vote, please take a moment to learn about
+    the animals whose campaigns have somehow made it this far.
+  </p>
+</header>
+
+<main>
+
+  <p class="intro">
+    Their owners were asked a few simple questions.
+    We have taken their perfectly reasonable answers and given them
+    the level of seriousness this tournament deserves.
+  </p>
+
+  <div class="pet-grid">
+
+    <!-- PERCY -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Percy 1 (Becca Hall).jpg" alt="Percy">
+      <div class="pet-content">
+        <h2 class="pet-name">Percy</h2>
+        <div class="owner">Owner: Becca Hall</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Percy should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- HOUDINI -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Houdini (Jacob).jpg" alt="Houdini">
+      <div class="pet-content">
+        <h2 class="pet-name">Houdini</h2>
+        <div class="owner">Owner: Jacob</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Houdini should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- GEORGE -->
+    <article class="pet-card">
+      <img class="pet-photo" src="George - Jeff Liddle.jpg" alt="George">
+      <div class="pet-content">
+        <h2 class="pet-name">George</h2>
+        <div class="owner">Owner: Jeff Liddle</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why George should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ICELAND -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Iceland (Jenna Rackovan).jpg" alt="Iceland">
+      <div class="pet-content">
+        <h2 class="pet-name">Iceland</h2>
+        <div class="owner">Owner: Jenna Rackovan</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Iceland should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- BENNY -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Benny (Hunter Edmonds).jpeg" alt="Benny">
+      <div class="pet-content">
+        <h2 class="pet-name">Benny</h2>
+        <div class="owner">Owner: Hunter Edmonds</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Benny should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- BEANS -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Beans (Sam Blackwell).jpg" alt="Beans">
+      <div class="pet-content">
+        <h2 class="pet-name">Beans</h2>
+        <div class="owner">Owner: Sam Blackwell</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Beans should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SPARKY -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Sparky (Tod O).JPEG" alt="Sparky">
+      <div class="pet-content">
+        <h2 class="pet-name">Sparky</h2>
+        <div class="owner">Owner: Tod O.</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Sparky should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- INDIANA JONES -->
+    <article class="pet-card">
+      <img class="pet-photo" src="Indiana Jones (Ben C).jpg" alt="Indiana Jones">
+      <div class="pet-content">
+        <h2 class="pet-name">Indiana Jones</h2>
+        <div class="owner">Owner: Ben C.</div>
+
+        <div class="profile-item">
+          <strong>Three things to know</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Loves more than anything</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="profile-item">
+          <strong>Why Indiana Jones should win</strong>
+          <p>ADD OWNER RESPONSE HERE</p>
+        </div>
+
+        <div class="campaign-box">
+          <strong>Campaign Headquarters</strong>
+          <p>Official campaign statement coming soon.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="actions">
+    <a class="button primary" href="index.html">Return to Voting</a>
+    <a class="button secondary" href="pet-bracket.pdf" target="_blank">
+      View Elite 8 Bracket
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  Flow Labs • 2026 Pet of the Year • Elite 8
+</footer>
+
+</body>
+</html>
