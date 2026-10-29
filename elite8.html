@@ -616,11 +616,12 @@
       </div>
     </article>
 <div class="pet-nav">
-  <button id="prev-pet" type="button">← Previous Pet</button>
+  <button id="prev-pet" type="button" onclick="previousPet()">← Previous Pet</button>
 
-  <span id="pet-counter">1 of 8</span>
+<span id="pet-counter">1 of 8</span>
 
-  <button id="next-pet" type="button">Next Pet →</button>
+<button id="next-pet" type="button" onclick="nextPet()">Next Pet →</button>
+
 </div>
 
   </div>
@@ -638,34 +639,34 @@
   Flow Labs • 2026 Pet of the Year • Elite 8
 </footer>
 
-<script>
-  const petCards = Array.from(document.querySelectorAll(".pet-slider .pet-card"));
-  const prevButton = document.getElementById("prev-pet");
-  const nextButton = document.getElementById("next-pet");
-  const petCounter = document.getElementById("pet-counter");
 
+<script>
+  const petCards = document.querySelectorAll(".pet-slider .pet-card");
   let currentPet = 0;
 
-  function showCurrentPet() {
+  function showPet() {
     petCards.forEach((card, index) => {
       card.style.display = index === currentPet ? "block" : "none";
     });
 
-    petCounter.textContent = (currentPet + 1) + " of " + petCards.length;
+    document.getElementById("pet-counter").textContent =
+      (currentPet + 1) + " of " + petCards.length;
   }
 
-  nextButton.addEventListener("click", function() {
+  function nextPet() {
     currentPet = (currentPet + 1) % petCards.length;
-    showCurrentPet();
-  });
+    showPet();
+  }
 
-  prevButton.addEventListener("click", function() {
+  function previousPet() {
     currentPet = (currentPet - 1 + petCards.length) % petCards.length;
-    showCurrentPet();
-  });
+    showPet();
+  }
 
-  showCurrentPet();
+  showPet();
 </script>
+
+
 
   
   
