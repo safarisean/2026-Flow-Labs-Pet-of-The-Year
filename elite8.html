@@ -638,5 +638,36 @@
   Flow Labs • 2026 Pet of the Year • Elite 8
 </footer>
 
+<script>
+  const petCards = Array.from(document.querySelectorAll(".pet-slider .pet-card"));
+  const prevButton = document.getElementById("prev-pet");
+  const nextButton = document.getElementById("next-pet");
+  const petCounter = document.getElementById("pet-counter");
+
+  let currentPet = 0;
+
+  function showCurrentPet() {
+    petCards.forEach((card, index) => {
+      card.style.display = index === currentPet ? "block" : "none";
+    });
+
+    petCounter.textContent = (currentPet + 1) + " of " + petCards.length;
+  }
+
+  nextButton.addEventListener("click", function() {
+    currentPet = (currentPet + 1) % petCards.length;
+    showCurrentPet();
+  });
+
+  prevButton.addEventListener("click", function() {
+    currentPet = (currentPet - 1 + petCards.length) % petCards.length;
+    showCurrentPet();
+  });
+
+  showCurrentPet();
+</script>
+
+  
+  
 </body>
 </html>
