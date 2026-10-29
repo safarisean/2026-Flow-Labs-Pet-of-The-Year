@@ -9,6 +9,40 @@
 
   <style>
 
+.pet-slider .pet-card {
+  display: none;
+}
+
+.pet-slider .pet-card.active {
+  display: block;
+}
+
+.pet-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 30px 0 10px;
+  flex-wrap: wrap;
+}
+
+.pet-nav button {
+  border: none;
+  background: #18313f;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 9px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#pet-counter {
+  font-weight: bold;
+  color: #5f7077;
+}
+
+    
     .campaign-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -238,7 +272,7 @@
     the level of seriousness this tournament deserves.
   </p>
 
-  <div class="pet-grid">
+  <div class="pet-slider">
 
     <!-- PERCY -->
     <article class="pet-card">
@@ -508,6 +542,13 @@
         </div>
       </div>
     </article>
+<div class="pet-nav">
+  <button id="prev-pet" type="button">← Previous Pet</button>
+
+  <span id="pet-counter">1 of 8</span>
+
+  <button id="next-pet" type="button">Next Pet →</button>
+</div>
 
   </div>
 
