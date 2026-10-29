@@ -244,6 +244,40 @@
   </style>
 </head>
 
+<script>
+  const petCards = document.querySelectorAll(".pet-slider .pet-card");
+  const prevButton = document.getElementById("prev-pet");
+  const nextButton = document.getElementById("next-pet");
+  const petCounter = document.getElementById("pet-counter");
+
+  let currentPet = 0;
+
+  function showPet(index) {
+    petCards.forEach((card, i) => {
+      card.classList.toggle("active", i === index);
+    });
+
+    petCounter.textContent = `${index + 1} of ${petCards.length}`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    currentPet =
+      (currentPet - 1 + petCards.length) % petCards.length;
+
+    showPet(currentPet);
+  });
+
+  nextButton.addEventListener("click", () => {
+    currentPet =
+      (currentPet + 1) % petCards.length;
+
+    showPet(currentPet);
+  });
+
+  showPet(currentPet);
+</script>
+
+  
 <body>
 
 <header>
