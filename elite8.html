@@ -90,6 +90,13 @@
       display: block;
     }
 
+    .sparky-photo {
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  background: #f4f6f5;
+}
+
     .pet-content {
       padding: 28px;
     }
@@ -161,6 +168,12 @@
       border-radius: 12px;
     }
 
+.sparky-gallery img {
+  height: auto;
+  object-fit: contain;
+}
+
+    
     .pet-nav {
       display: flex;
       justify-content: space-between;
@@ -694,7 +707,7 @@
 
 <!-- SPARKY -->
 <article class="pet-card">
-  <img class="pet-photo" src="Sparky (Tod O).JPEG" alt="Sparky">
+  <img class="pet-photo sparky-photo" src="Sparky (Tod O).JPEG" alt="Sparky">
 
   <div class="pet-content">
     <h2 class="pet-name">Sparky</h2>
@@ -750,7 +763,7 @@
         He showed up. He stayed. He might just win.
       </p>
     </div>
-  <div class="campaign-gallery">
+  <div class="campaign-gallery sparky-gallery">
         <img src="sparky-campaign-1.JPEG" alt="Sparky campaign photo">
         <img src="sparky-campaign-2.JPEG" alt="Sparky campaign photo">
       </div>
